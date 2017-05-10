@@ -44,6 +44,9 @@ module.exports = {
     //the below plugins add <script> tags to the html doc specified
     new HtmlWebpackPlugin({
       template: 'src/index.html'
+    }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     })
   ]
 };
